@@ -1,4 +1,4 @@
-package stream;
+package com.dingq.streamdemo.stream;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,8 +7,9 @@ import java.util.Random;
 import java.util.stream.Stream;
 
 /**
- * @Author:tanghui
- * @Date:2018/8/31 16:09
+ * @Author dingq
+ * @Date 2022-07-09 9:49
+ * @Version 1.0
  */
 public class StreamDemo2 {
     public static void main(String[] args) {
@@ -17,21 +18,12 @@ public class StreamDemo2 {
         Stream.of(list);
         list.stream();
         list.parallelStream();
-        //数组创建
-        Arrays.stream(new int[]{2, 3, 5});
+        //数组的创建
+        Arrays.stream(new int[]{2,3,7});
         //使用random创建一个无限流
         new Random().ints().limit(10);
         //自己产生流
         Random random = new Random();
-        Stream.generate(() -> random.nextInt()).limit(20);
+        Stream.generate(()->random.nextInt()).limit(20);
     }
 }
-
-
-
-
-
-
-
-
-
